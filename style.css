@@ -3,6 +3,7 @@ h1 {
 	text-align: center;
 }
 
+/*adding a background color lets me see what the background board is doing during movement*/
 table tr td {
 	width: 50px;
 	height: 50px;

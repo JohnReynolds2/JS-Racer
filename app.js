@@ -16,30 +16,33 @@ const lane2 = [];
 
 
 //This is an event listern to see how the square is being targeted (for a click)
-playerOne.addEventListener('click', (event) => {
-	console.log(event);
-	playerOne.style.color="black";
-});
+// playerOne.addEventListener('click', (event) => {
+// 	console.log(event);
+// 	playerOne.style.color="black";
+// });
 
 
 //function that will communicate with the red square and move it right one place
 //this moves the red square across the page but with no winning alert
-const moveRed = () => {
+//by adding an empty string into the .puch command it remembers the value that was in the array
+const moveRed = (event) => {
 	document.getElementById('red').nextElementSibling.setAttribute('id', 'red');
 	document.querySelector('#red').removeAttribute('id');
-	lane1.push();
-	if(lane1.length >= 6) {
+	lane1.push('');
+	//this console.log allowed me to see the values in the array as I clicked the key right
+	//console.log(lane1);
+	if (lane1.length >= 7) {
 		alert("red wins");
 	}
 	
 };
 
 //function that will tell blue square to move right one place
-const moveBlue = () => {
-	playerTwo.nextElementSibling.setAttribute('id', 'blue');
-	document.querySelector('blue').removeAttribute('id');
-	lane2.push('yo');
-	if(lane2.length >= 6) {
+const moveBlue = (event) => {
+	document.getElementById('blue').nextElementSibling.setAttribute('id', 'blue');
+	document.querySelector('#blue').removeAttribute('id');
+	lane2.push('');
+	if(lane2.length >= 7) {
 		alert("blue wins");
 	}
 
