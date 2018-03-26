@@ -1,0 +1,30 @@
+h1 {
+	font-size: 100px;
+	text-align: center;
+}
+
+
+#red {
+	border: solid 21px #ff0000;
+ 	width: 25px;
+ 	height: 25px;
+ 	position: relative;
+    left: 30px;
+}
+
+#blue {
+	border: solid 21px #0000ff;
+ 	width: 25px;
+ 	height: 25px;
+ 	position: relative;
+    left: 30px;
+
+}
+
+.finishLine {
+	background-color: black;
+	width: 5px;
+	height: 75px;
+	right: 50px;
+	position: absolute;
+}
