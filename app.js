@@ -42,7 +42,7 @@ const moveBlue = (event) => {
 	document.getElementById('blue').nextElementSibling.setAttribute('id', 'blue');
 	document.querySelector('#blue').removeAttribute('id');
 	lane2.push('');
-	if(lane2.length >= 7) {
+	if (lane2.length >= 7) {
 		alert("blue wins");
 	}
 
