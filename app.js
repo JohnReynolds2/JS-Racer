@@ -26,12 +26,13 @@ const lane2 = [];
 //this moves the red square across the page but with no winning alert
 //by adding an empty string into the .puch command it remembers the value that was in the array
 const moveRed = (event) => {
+
 	document.getElementById('red').nextElementSibling.setAttribute('id', 'red');
 	document.querySelector('#red').removeAttribute('id');
 	lane1.push('');
 	//this console.log allowed me to see the values in the array as I clicked the key right
 	//console.log(lane1);
-	if (lane1.length >= 7) {
+	if (lane1.length >= 23) {
 		alert("red wins");
 	}
 	
@@ -39,10 +40,12 @@ const moveRed = (event) => {
 
 //function that will tell blue square to move right one place
 const moveBlue = (event) => {
+
 	document.getElementById('blue').nextElementSibling.setAttribute('id', 'blue');
 	document.querySelector('#blue').removeAttribute('id');
 	lane2.push('');
-	if (lane2.length >= 7) {
+	console.log(lane2);
+	if (lane2.length >= 23) {
 		alert("blue wins");
 	}
 
@@ -51,13 +54,17 @@ const moveBlue = (event) => {
 //found the keycodes for right-arrow and 'd' key online. need to someonehow create the function
 //since both squares are moving right you can combine both keys to the same function.
 //once they are pressed they should act in the same way
+
+//The reason why the blue wasn't working was because I had a syntactical error. 
 const moveRight = (event) => {
 	if (event.keyCode == 39) {
 		moveRed();
 	}
-	if (event.keycode == 68) {
+	if (event.keyCode == 68) {
 		moveBlue();
 	}
 };
 
 document.onkeydown = moveRight;
+console.log(moveRight);
+
